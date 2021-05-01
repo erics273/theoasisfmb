@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./node_modules/uikit/dist/css/uikit.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Homemade+Apple&family=Rock+Salt&display=swap" rel="stylesheet">
+    
+
+    <!-- TODO: pick/create favicon -->
+
+    <style>
+        #logo {
+            /* font-family:'Homemade Apple', cursive; */
+            /* font-family: 'Handlee', cursive; */
+            font-family: 'Rock Salt', cursive;
+        }
+    </style>
+
+    <title>The Oasis - Fort Myers Beach, FL</title>
+</head>
+
+<body>
+
+    <!-- lazy load images (https://getuikit.com/docs/image) -->
+    <!-- cards (https://getuikit.com/docs/card) -->
+    <!-- counter (https://getuikit.com/docs/countdown) -->
+    <!-- make images fill container (https://getuikit.com/docs/cover) -->
+    <!-- nice way to list features (https://getuikit.com/docs/description-list) -->
+    <!-- content dividers (https://getuikit.com/docs/divider) -->
+    <!-- animate into the page (https://getuikit.com/docs/scrollspy) -->
+    <!-- make things appear on top of eachother -->
+
+    <header>
+        <!-- Nav bar  -->
+        <!-- smooth scroll to sections on below page -->
+        <nav class="uk-navbar-container uk-navbar-primary" uk-navbar>
+            <div class="uk-navbar-left">
+
+                <a id="logo" class="uk-navbar-item uk-logo" href="#">The Oasis FMB</a> - Fort Myers Beach, FL
+
+            </div>
+
+            <div class="uk-navbar-nav uk-margin-auto">
+                <div class="uk-navbar-item">
+                    <a class="uk-button uk-button-primary uk-button-large" href="#">
+                        <span class="uk-icon uk-margin-small-right" uk-icon="icon: calendar"></span>
+                        Book Now!
+                    </a>
+                </div>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#"><span class="uk-icon uk-margin-small-right" uk-icon="icon: home"></span>Home</a></li>
+                    <li><a href="#"><span class="uk-icon uk-margin-small-right" uk-icon="icon: info"></span>Learn More</a></li>
+                    <li><a href="#"><span class="uk-icon uk-margin-small-right" uk-icon="icon: camera"></span>Photos</a></li>
+                    <li><a href="#"><span class="uk-icon uk-margin-small-right" uk-icon="icon: list"></span>Amenities</a></li>
+                    <li><a href="#"><span class="uk-icon uk-margin-small-right" uk-icon="icon: receiver"></span>Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- slidewhow/hero -->
+        <div uk-slideshow="animation: push">
+
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+        
+                <ul class="uk-slideshow-items">
+                    <li>
+                        <img src="https://www.distinctivebeachrentals.com/unitimages/34797/photo_60691842-1500x1000.jpg" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img src="https://www.distinctivebeachrentals.com/unitimages/34797/PXL_20210321_005844867_2.jpg" alt="" uk-cover>
+                    </li>
+                    <li>
+                        <img src="https://www.distinctivebeachrentals.com/unitimages/34797/photo_60691832-1500x1000.jpg" alt="" uk-cover>
+                    </li>
+                </ul>
+        
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+                <ul class="uk-slideshow-nav uk-thumbnav uk-flex-center uk-padding-small uk-section uk-section-primary">
+                    <li uk-slideshow-item="0"><a href="#"></a><img src="https://www.distinctivebeachrentals.com/unitimages/34797/photo_60691842-1500x1000.jpg" class="uk-height-small" alt="" uk-img></a></li>
+                    <li uk-slideshow-item="1"><a href="#"><img src="https://www.distinctivebeachrentals.com/unitimages/34797/PXL_20210321_005844867_2.jpg" class="uk-height-small" alt="" uk-img></a></li>
+                    <li uk-slideshow-item="2"><a href="#"><img src="https://www.distinctivebeachrentals.com/unitimages/34797/photo_60691832-1500x1000.jpg" class="uk-height-small" alt="" uk-img></a></li>
+                </ul>
+        
+            </div>
+        
+
+        <!-- Desscription/about (https://getuikit.com/docs/filter) -->
+
+        <!-- photos (https://getuikit.com/docs/filter) -->
+
+
+        <!-- amenities (https://getuikit.com/docs/filter) -->
+
+        <!-- booking cards -->
+
+        <!-- contact -->
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+    <script src="./node_modules/uikit/dist/js/uikit.min.js"></script>
+    <script src="./node_modules/uikit/dist/js/uikit-icons.min.js"></script>
+</body>
+
+</html>
