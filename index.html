@@ -26,11 +26,10 @@
         .hero{
             background-image: url("./assets/images/hero_sunset.webp");
 
-            /* set the height of the Jumbotron */
-            height: 100vh;
+            padding-bottom: 56.25%; /* 16:9 */
 
             /* stretch the background image so it covers the entire Jumbotron */
-            background-size: cover;
+            background-size: 100%;
 
             /* make sure the background does not repeat */
             background-repeat: no-repeat;
@@ -39,18 +38,6 @@
             background-attachment: fixed;
         }
 
-        @media (max-width: 767.98px) { 
-            .hero{
-
-
-                /* set the height of the Jumbotron */
-                height: 40vh;
-
-                background-size: contain;
-
-            }
-         }
-
     </style>
 
     <title>The Oasis - Fort Myers Beach, FL</title>
@@ -58,7 +45,7 @@
 
 <body data-bs-spy="scroll" data-bs-target="#headerNav" data-bs-offset="0">
     <header class="fixed-top shadow">
-        <nav id="headerNav" class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <nav id="headerNav" class="navbar navbar-expand-lg navbar-dark bg-transparent">
             <div class="container-fluid">
                 <div class="text-nowrap d-flex flex-column">
                     <a class="navbar-brand" id="logo" href="#">The Oasis FMB</a>
@@ -66,7 +53,7 @@
                 </div>
 
 
-                <a class="btn btn-outline-dark btn-lg d-none d-lg-block text-nowrap w-50 mx-5 rounded-0 booknow" href="#booknow">
+                <a class="btn btn-outline-dark btn-lg d-none d-lg-block text-nowrap w-50 mx-5 booknow" href="#booknow">
                     <i class="bi bi-calendar-event me-3"></i>Book Your Stay Now!
                 </a>
 
@@ -92,12 +79,11 @@
         </nav>
     </header>
 
-    <main>
+    <main class="shadow-sm mb-5">
         <!-- slidewhow/hero -->
-        <div class="rounded-lg shadow-lg hero"></div>
+        <section class="rounded-lg shadow-lg hero"></section>
 
-
-        <div id="learnMore" class="container-fluid p-5 shadow-lg">
+        <section id="learnMore" class="container-fluid p-5 shadow-lg">
             <div class="row row-cols-1 row-cols-lg-2 flex-lg-row-reverse justify-content-center align-items-center g-5 mx-5 py-5">
                 <div class="col col-lg-5">
                     <img src="./assets/images/beach_perspective.jpg"
@@ -121,14 +107,14 @@
                         are accustomed to at home, PLUS the tropical setting!</p>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- photos (https://getuikit.com/docs/filter) -->
 
         <section id="amenities" class="container-fluid p-5 shadow-lg">
             <!-- amenities (https://getuikit.com/docs/filter) -->
             <h2 class="display-6 mb-4 fw-bold pt-5">Amenities</h2>
-            <div class="row row-cols-2 row-cols-lg-4 g-4 py-5 bg-light">
+            <div class="row row-cols-2 row-cols-lg-4 g-4 py-5">
                 <div class="col d-flex align-items-start">
                     <!-- <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"/></svg> -->
                     <!-- <svg xmlns="http://www.w3.org/2000/svg" width="1.75em" height="1.75em" fill="currentColor" class="bi text-muted bi-bootstrap me-3" viewBox="0 0 16 16">
@@ -208,7 +194,7 @@
                             <h5 class="card-title">The Oasis</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                                 additional content. This content is a little bit longer.</p>
-                            <a class="btn btn-info mt-auto rounded-0" href="https://www.airbnb.com/rooms/28710904" target="_blank">
+                            <a class="btn btn-info mt-auto" href="https://www.airbnb.com/rooms/28710904" target="_blank">
                                 <i class="bi bi-calendar-event me-3"></i>
                                 Book The Oasis!
                             </a>
@@ -223,7 +209,7 @@
                             <h5 class="card-title">The Oasis Upper</h5>
                             <p class="card-text">This card has supporting text below as a natural lead-in to additional
                                 content.</p>
-                            <a class="btn btn-info mt-auto rounded-0" href="https://www.airbnb.com/rooms/28710906" target="_blank">
+                            <a class="btn btn-info mt-auto" href="https://www.airbnb.com/rooms/28710906" target="_blank">
                                 <i class="bi bi-calendar-event me-3"></i>
                                 Book The Oasis Upper!
                             </a>
@@ -240,7 +226,7 @@
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                                 additional content. This card has even longer content than the first to show that equal
                                 height action.</p>
-                            <a class="btn btn-info mt-auto rounded-0" href="https://www.airbnb.com/rooms/48828067" target="_blank">
+                            <a class="btn btn-info mt-auto" href="https://www.airbnb.com/rooms/48828067" target="_blank">
                                 <i class="bi bi-calendar-event me-3"></i>
                                 Book The OasisLower!
                             </a>
@@ -256,15 +242,19 @@
     <footer>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <div class="text-nowrap">
-                    <span class="navbar-text fs-5" >© 2021 The Oasis FMB</span>
+                <div class="text-nowrap align-self-end">
+                    <span class="navbar-text fs-6" >© 2021 The Oasis FMB</span>
                 </div>
                 
                 <div class="d-flex flex-column">
-                    <small class="navbar-text p-0">Connect with us on:</small>
-                    <div class="navbar-nav ms-auto">
-                        <a class="nav-link text-nowrap" href="https://www.facebook.com/TheOasisFMB" target="_blank"><i class="bi bi-facebook fs-1"></i></a>
-                        <a class="nav-link text-nowrap" href="https://www.instagram.com/theoasisfmb/" target="_blank"><i class="bi bi-instagram fs-1"></i></a>
+                    <small class="navbar-text p-0 m-0">Connect with us on:</small>
+                    <ul class="nav ms-auto p-0 m-0">
+                        <li class="nav-item">
+                            <a class="nav-link link-secondary" href="https://www.facebook.com/TheOasisFMB" target="_blank"><i class="bi bi-facebook fs-3"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-secondary" href="https://www.instagram.com/theoasisfmb/" target="_blank"><i class="bi bi-instagram fs-3"></i></a>
+                        </li>
                     </div>
                 </div>
             
@@ -285,12 +275,16 @@
         function toggleNav() {
                 if (window.scrollY > (hero.offsetHeight - navbar.offsetHeight)) {
                     navbar.classList.remove("bg-transparent");
+                    navbar.classList.remove("navbar-dark");
                     navbar.classList.add("bg-light");
+                    navbar.classList.add("navbar-light");
                     booknowbutton.classList.remove("btn-outline-dark")
                     booknowbutton.classList.add("btn-dark")
                 } else {
                     navbar.classList.remove("bg-light");
                     navbar.classList.add("bg-transparent");
+                    navbar.classList.add("navbar-dark");
+                    navbar.classList.remove("navbar-light");
                     booknowbutton.classList.add("btn-outline-dark")
                     booknowbutton.classList.remove("btn-dark")
                 }
