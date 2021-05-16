@@ -9,8 +9,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^5.0.0-beta3",
-    "bootstrap-icons": "^1.4.1",
-    "uikit": "^3.6.20"
+    "bootstrap-icons": "^1.4.1"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
