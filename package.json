@@ -17,6 +17,6 @@
   },
   "scripts": {
     "predeploy": "yarn install",
-    "deploy": "gh-pages -d . -t"
+    "deploy": "gh-pages -d . -a .nojekyll"
   }
 }
