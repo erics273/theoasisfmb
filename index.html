@@ -27,7 +27,7 @@
             background-image: url("./assets/images/hero_sunset.webp");
 
             /* set the height of the Jumbotron */
-            height: 850px;
+            height: 100vh;
 
             /* stretch the background image so it covers the entire Jumbotron */
             background-size: cover;
@@ -38,6 +38,18 @@
             /* set the background to be fixed so the page appears to scroll over it */
             background-attachment: fixed;
         }
+
+        @media (max-width: 767.98px) { 
+            .hero{
+
+
+                /* set the height of the Jumbotron */
+                height: 40vh;
+
+                background-size: contain;
+
+            }
+         }
 
     </style>
 
