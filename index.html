@@ -6,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Homemade+Apple&family=Rock+Salt&display=swap"
         rel="stylesheet">
@@ -41,9 +45,18 @@
 
         .carousel-item img {
             object-fit: cover;
-            object-position: center;
-            height: 75vh;
+            object-position: center top;
+            height: 70vh;
             overflow: hidden;
+        }
+
+        .navbar {
+            background-color: rgba(var(--bs-dark-rgb), 0.5);
+            /* Adjust transparency (0 = fully transparent, 1 = fully opaque) */
+            backdrop-filter: blur(10px);
+            /* Optional: Adds a blur effect for better readability */
+            padding-top: 1.5rem;  /* Adjust top padding */
+            padding-bottom: 1.5rem; /* Adjust bottom padding */
         }
     </style>
 
@@ -65,8 +78,8 @@
         <nav id="headerNav" class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <div class="text-nowrap d-flex flex-column">
-                    <a class="navbar-brand text-white" id="logo" href="#">The Oasis FMB</a>
-                    <small class="ps-3 text-white">Fort Myers Beach, FL</small>
+                    <a class="navbar-brand" id="logo" href="#">The Oasis FMB</a>
+                    <small class="ps-3 text-light">Fort Myers Beach, FL</small>
                 </div>
 
 
@@ -102,7 +115,7 @@
     <main class="shadow-sm mb-5">
         <!-- slidewhow/hero -->
         <!-- <section class="rounded-lg shadow-lg hero"></section> -->
-        <section id="heroCarousel" class="rounded-lg shadow-lg">
+        <section id="heroCarousel" class="rounded-lg p-0 shadow-lg container">
             <div id="heroCarouselIndicators" class="carousel slide carousel-fade">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#heroCarouselIndicators" data-bs-slide-to="0" class="active"
@@ -123,8 +136,7 @@
                         <img src="./assets/images/hero_sunset.webp" class="d-block w-100" alt="Eveneing Sunset">
                     </div>
                     <div class="carousel-item">
-                        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NTYzMDA2NTA5NTU2NTEwNzYx/original/0f34c220-d3d2-4ac2-a8d9-788c0aa88130.jpeg"
-                            class="d-block w-100" alt="Eveneing Sunset">
+                        <img src="./assets/images/oasis_upper_lanai.jpg" class="d-block w-100" alt="Eveneing Sunset">
                     </div>
                     <div class="carousel-item">
                         <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NTYzMDA2NTA5NTU2NTEwNzYx/original/c31adc3a-1e35-4b65-9262-4ae71ed15845.jpeg"
@@ -156,7 +168,23 @@
             </div>
         </section>
 
-        <section id="learnMore" class="container-fluid p-5 shadow-lg container">
+        <section id="virtualTour" class="shadow-lg pb-5 container">
+            <h1 class="display-5 fw-bold lh-1 mb-3 border-bottom pb-3 pt-5 ps-5">Explore The Oasis</h1>
+            <p class="lead py-3 px-5">
+                Step inside our beachside retreat with our iGuide Virtual Tour! Explore every corner of
+                The Oasis from the comfort of your home. Walk through bright open spaces, take in the
+                stunning coastal décor, and imagine yourself unwinding just steps from the sand. Whether
+                you're planning your next getaway or just dreaming of ocean breezes, our immersive tour
+                brings you one step closer to paradise.
+            </p>
+            <div style="display:block;position:relative;padding:0 0 57% 0;overflow:hidden;height:0;width:100%"><iframe
+                    src="//youriguide.com/embed/vMC6QL3LKDXWC1?mute=1&unbranded=1&nodetails=1&minfp=1&autostart=0&bgcolor=FFFFFF&page=tour&pano=10080&rotation=-2.7401669256310983"
+                    style="display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:0;" scrolling="no"
+                    frameborder="0" allowfullscreen></iframe></div>
+        </section>
+
+
+        <section id="learnMore" class="p-5 shadow-lg container">
             <div class="row row-cols-1 row-cols-lg-2 flex-lg-row-reverse justify-content-center align-items-center g-5">
                 <div class="col col-lg-5">
                     <img src="./assets/images/beach_perspective.jpg" class="rounded-5 shadow-lg img-thumbnail img-fluid"
@@ -187,6 +215,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- photos (https://getuikit.com/docs/filter) -->
 
@@ -316,8 +345,12 @@
     </footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
 
         const navbar = document.querySelector("header>nav.navbar");
