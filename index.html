@@ -50,12 +50,6 @@
             overflow: hidden;
         }
 
-        /* Mobile styles: Apply styles for screens smaller than 576px */
-        @media (max-width: 576px) {
-        .carousel-item img {
-            object-fit: fill;
-        }
-
         .navbar {
             background-color: rgba(var(--bs-dark-rgb), 0.5);
             /* Adjust transparency (0 = fully transparent, 1 = fully opaque) */
@@ -70,6 +64,20 @@
         .navbar-brand,
         .bi {
             color: rgba(var(--bs-info-rgb));
+        }
+
+        /* Mobile styles: Apply styles for screens smaller than 576px */
+        @media (max-width: 576px) {
+            .carousel-item img {
+                height: 50vh;
+            }
+
+            .navbar {
+                padding-top: 0rem;
+                /* Adjust top padding */
+                padding-bottom: 0.5rem;
+                /* Adjust bottom padding */
+            }
         }
     </style>
 
@@ -265,7 +273,8 @@
                     <i class="fas fa-tv text-secondary me-2 fs-3"></i>
                     <div>
                         <h4 class="fw-bold mb-0">Smart TV's</h4>
-                        <p>All TVs at The Oasis are equiped with Roku smart TV's so you don't have to miss your favorite TV
+                        <p>All TVs at The Oasis are equiped with Roku smart TV's so you don't have to miss your favorite
+                            TV
                             shows while on vacation.</p>
                     </div>
                 </div>
@@ -273,7 +282,8 @@
                     <i class="fas fa-utensils text-secondary me-2 fs-3"></i>
                     <div>
                         <h4 class="fw-bold mb-0">Full Kitchen</h4>
-                        <p>The Oasis has a full kitchen filled with everything you need to a multi-course gourmet meal.</p>
+                        <p>The Oasis has a full kitchen filled with everything you need to a multi-course gourmet meal.
+                        </p>
                     </div>
                 </div>
                 <div class="col d-flex align-items-start">
@@ -316,8 +326,7 @@
             <div class="row row-cols-1 row-cols-lg-3 g-5">
                 <div class="col mx-auto">
                     <div class="card h-100 shadow-sm">
-                        <img src="./assets/images/oasis_front_view.jpg"
-                            class="card-img-top" alt="The Oasis Upper">
+                        <img src="./assets/images/oasis_front_view.jpg" class="card-img-top" alt="The Oasis Upper">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">The Oasis</h5>
                             <p class="card-text">6 guests · 3 bedrooms · 3 Bath · Heated saltwater pool · Newly
