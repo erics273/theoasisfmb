@@ -61,7 +61,8 @@
             /* Adjust bottom padding */
         }
 
-        .navbar-brand, .bi {
+        .navbar-brand,
+        .bi {
             color: rgba(var(--bs-info-rgb));
         }
     </style>
@@ -103,8 +104,10 @@
                     <div class="navbar-nav mx-auto">
                         <a class="btn btn-dark d-lg-none d-sm-block mt-lg-0 text-nowrap" href="#booknow"><i
                                 class="bi bi-calendar-event me-3"></i>Book Your Stay Now!</a>
-                        <a class="nav-link me-3 text-nowrap" href="#virtualTour"><i class="bi bi-info-circle me-2"></i>Virtual Tour</a>
-                        <a class="nav-link me-3 text-nowrap" href="#learnMore"><i class="bi bi-info-circle me-2"></i>Learn More</a>
+                        <a class="nav-link me-3 text-nowrap" href="#virtualTour"><i
+                                class="bi bi-info-circle me-2"></i>Virtual Tour</a>
+                        <a class="nav-link me-3 text-nowrap" href="#learnMore"><i
+                                class="bi bi-info-circle me-2"></i>Learn More</a>
                         <!-- <a class="nav-link me-3 text-nowrap" href="#"><i class="bi bi-camera me-2"></i>Photos</a> -->
                         <a class="nav-link me-3 text-nowrap" href="#amenities"><i
                                 class="bi bi-list me-2"></i>Amenities</a>
@@ -135,6 +138,8 @@
                         aria-label="Slide 5"></button>
                     <button type="button" data-bs-target="#heroCarouselIndicators" data-bs-slide-to="5"
                         aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#heroCarouselIndicators" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -144,20 +149,21 @@
                         <img src="./assets/images/oasis_upper_lanai.jpg" class="d-block w-100" alt="Eveneing Sunset">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/images/king_bedroom.jpg"
-                            class="d-block w-100" alt="beach sceene bedroom mural">
+                        <img src="./assets/images/king_bedroom.jpg" class="d-block w-100"
+                            alt="beach sceene bedroom mural">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/images/queen_bedroom.jpg"
-                            class="d-block w-100" alt="priate ship bedroom mural">
+                        <img src="./assets/images/queen_bedroom.jpg" class="d-block w-100"
+                            alt="priate ship bedroom mural">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/images/pool_area.jpg"
-                            class="d-block w-100" alt="Eveneing Sunset">
+                        <img src="./assets/images/pool_area.jpg" class="d-block w-100" alt="Eveneing Sunset">
                     </div>
                     <div class="carousel-item">
-                        <img src="./assets/images/outdoor_dining.jpg"
-                            class="d-block w-100" alt="Eveneing Sunset">
+                        <img src="./assets/images/outdoor_dining.jpg" class="d-block w-100" alt="Eveneing Sunset">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/oasis_front_view.jpg" class="d-block w-100" alt="Eveneing Sunset">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#heroCarouselIndicators"
@@ -174,9 +180,11 @@
         </section>
 
         <section id="virtualTour" class="shadow-lg py-5 container">
-            <h1 class="display-5 fw-bold lh-1 mb-3 border-bottom pb-3 ps-5">Explore The Oasis</h1>
+            <h1 class=" fw-bold lh-1 mb-3 border-bottom pb-3 ps-5 text-center">Welcome to "The Oasis" on Fort Myers
+                Beach.</h1>
             <p class="lead py-3 px-5">
-                Step inside our beachside retreat with our iGuide Virtual Tour! Explore every corner of
+                <span class="fw-bold"></span> Step inside our beachside retreat with our iGuide Virtual Tour! Explore
+                every corner of
                 The Oasis from the comfort of your home. Walk through bright open spaces, take in the
                 stunning coastal décor, and imagine yourself unwinding just steps from the sand. Whether
                 you're planning your next getaway or just dreaming of ocean breezes, our immersive tour
@@ -198,7 +206,7 @@
                 <div class="col col-lg-7">
                     <h1 class="display-5 fw-bold lh-1 mb-3 border-bottom pb-3">About The Oasis</h1>
                     <p class="lead">
-                        Welcome to "The Oasis" on Fort Myers Beach. This <strong>newly remodeled</strong>, 3 bedroom, 3
+                        This <strong>newly remodeled</strong>, 3 bedroom, 3
                         bathroom house,
                         has an <strong>in-ground heated saltwater pool</strong> and is located mid-island in a quiet
                         residential area with
@@ -226,7 +234,7 @@
 
         <section id="amenities" class="container p-5 shadow-lg">
             <!-- amenities (https://getuikit.com/docs/filter) -->
-            <h2 class="display-6 mb-4 fw-bold pt-5">Amenities</h2>
+            <h2 class="display-6 mb-4 fw-bold">Amenities</h2>
             <div class="row row-cols-2 row-cols-lg-4 g-4 py-5">
                 <div class="col d-flex align-items-start">
                     <!-- <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"/></svg> -->
@@ -379,6 +387,24 @@
 
         document.addEventListener('scroll', function (e) {
             toggleNav();
+        });
+
+        let offset = -100; // Adjust this value to set how much higher you want to scroll
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                let target = document.querySelector(this.getAttribute("href"));
+                if (target) {
+                    let targetPosition = target.offsetTop + offset;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
         });
 
     </script>
