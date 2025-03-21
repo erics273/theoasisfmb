@@ -63,7 +63,7 @@
         }
 
         .navbar-brand,
-        .bi {
+        .navbar-nav>a>.bi {
             color: rgba(var(--bs-info-rgb));
         }
 
@@ -363,11 +363,11 @@
                     <ul class="nav ms-auto p-0 m-0">
                         <li class="nav-item">
                             <a class="nav-link link-secondary" href="https://www.facebook.com/TheOasisFMB"
-                                target="_blank"><i class="bi bi-facebook fs-3"></i></a>
+                                target="_blank"><i class="bi bi-facebook fs-3 text-info"></i></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link link-secondary" href="https://www.instagram.com/theoasisfmb/"
-                                target="_blank"><i class="bi bi-instagram fs-3"></i></a>
+                                target="_blank"><i class="bi bi-instagram fs-3 text-info"></i></a>
                         </li>
                 </div>
             </div>
@@ -393,8 +393,12 @@
         function toggleNav() {
             if (window.scrollY > (hero.offsetHeight - navbar.offsetHeight)) {
                 navbar.classList.add("bg-dark");
+                booknowbutton.classList.remove("btn-outline-info")
+                booknowbutton.classList.add("btn-info")
             } else {
                 navbar.classList.remove("bg-dark");
+                booknowbutton.classList.add("btn-outline-info")
+                booknowbutton.classList.remove("btn-info")
             }
         }
 
