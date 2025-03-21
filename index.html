@@ -50,6 +50,12 @@
             overflow: hidden;
         }
 
+        /* Mobile styles: Apply styles for screens smaller than 576px */
+        @media (max-width: 576px) {
+        .carousel-item img {
+            object-fit: fill;
+        }
+
         .navbar {
             background-color: rgba(var(--bs-dark-rgb), 0.5);
             /* Adjust transparency (0 = fully transparent, 1 = fully opaque) */
