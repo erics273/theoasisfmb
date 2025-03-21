@@ -25,6 +25,7 @@
             /* font-family:'Homemade Apple', cursive; */
             /* font-family: 'Handlee', cursive; */
             font-family: 'Rock Salt', cursive;
+            font-size: 2rem;
         }
 
         .hero {
@@ -69,15 +70,20 @@
         /* Mobile styles: Apply styles for screens smaller than 576px */
         @media (max-width: 576px) {
             .carousel-item img {
-                height: 60vh;
+                height: 55vh;
             }
 
             .navbar {
-                padding-top: 0rem;
+                padding-top: 0.5rem;
                 /* Adjust top padding */
                 padding-bottom: 0.5rem;
                 /* Adjust bottom padding */
             }
+
+            #logo {
+                font-size: 1rem;
+            }
+
         }
     </style>
 
@@ -99,8 +105,8 @@
         <nav id="headerNav" class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <div class="text-nowrap d-flex flex-column align-items-center">
-                    <a class="navbar-brand fs-3" id="logo" href="#">The Oasis</a>
-                    <small class="text-light">Fort Myers Beach, FL</small>
+                    <a class="navbar-brand" id="logo" href="#">The Oasis</a>
+                    <small class="text-light d-none d-sm-block">Fort Myers Beach, FL</small>
                 </div>
 
 
@@ -204,7 +210,7 @@
                 you're planning your next getaway or just dreaming of ocean breezes, our immersive tour
                 brings you one step closer to paradise.
             </p>
-            <p class="fw-bold fs-4 text-center">Click anywhere below to start exploring The Oasis</p>
+            <p class="fw-bold fs-5 text-center">Click anywhere below to start exploring The Oasis</p>
             <div style="display:block;position:relative;padding:0 0 57% 0;overflow:hidden;height:0;width:100%"><iframe
                     src="//youriguide.com/embed/vMC6QL3LKDXWC1?mute=1&unbranded=1&nodetails=1&minfp=1&autostart=0&bgcolor=FFFFFF&page=tour&pano=10080&rotation=-2.7401669256310983"
                     style="display:block;position:absolute;top:0;left:0;width:100%;height:100%;border:0;" scrolling="no"
