@@ -60,6 +60,12 @@
             /* Adjust top padding */
             padding-bottom: 1.5rem;
             /* Adjust bottom padding */
+            transition: padding 0.3s ease;
+        }
+
+        .navbar.navbar-padding-transform {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
         }
 
         .navbar-brand,
@@ -90,6 +96,7 @@
         .navbar .container.nav-padding-transform {
             padding-left: 60px !important;
         }
+
 
         /* Ensure nav links are centered vertically */
         .navbar-nav {
@@ -167,7 +174,8 @@
             <div class="container">
                 <div class="text-nowrap d-flex flex-column align-items-center">
                     <a class="navbar-brand" id="logo" href="#">
-                        <img src="./assets/images/theoasislogo.png" id="logo-image" alt="The Oasis Logo" class="logo-image ">
+                        <img src="./assets/images/theoasislogo.png" id="logo-image" alt="The Oasis Logo"
+                            class="logo-image">
                     </a>
                 </div>
 
@@ -462,12 +470,14 @@
                 booknowbutton.classList.add("btn-info")
                 logoImage.classList.add("logo-image-transform")
                 headerContainer.classList.add("nav-padding-transform");
+                 navbar.classList.add("navbar-padding-transform"); 
             } else {
                 navbar.classList.remove("bg-dark");
                 booknowbutton.classList.add("btn-outline-info")
                 booknowbutton.classList.remove("btn-info")
                 logoImage.classList.remove("logo-image-transform")
                 headerContainer.classList.remove("nav-padding-transform");
+                navbar.classList.remove("navbar-padding-transform"); // ⬅️ new line
             }
         }
 
