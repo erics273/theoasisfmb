@@ -64,8 +64,8 @@
         }
 
         .navbar.navbar-padding-transform {
-            padding-top: 0.25rem;
-            padding-bottom: 0.25rem;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
         }
 
         .navbar-brand,
@@ -105,7 +105,7 @@
         }
 
         .logo-image-transform {
-            position: static;
+            position: static !important;
             width: 100px;
             margin-bottom: 0;
             display: block;
@@ -114,10 +114,12 @@
         /* Mobile/collapsed breakpoint */
         @media (max-width: 991.98px) {
             .logo-image {
-                position: static;
                 width: 100px;
-                margin-bottom: 0;
-                display: block;
+                position: absolute;
+                left: 50px;
+                bottom: -64px;
+                /* hangs over the bottom */
+                z-index: 10;
             }
 
             .navbar .container {
@@ -127,9 +129,7 @@
                 align-items: center;
             }
 
-            .navbar-nav {
-                align-items: flex-start;
-            }
+
 
             .booknow {
                 width: 100% !important;
@@ -471,7 +471,7 @@
                 booknowbutton.classList.add("btn-info")
                 logoImage.classList.add("logo-image-transform")
                 headerContainer.classList.add("nav-padding-transform");
-                 navbar.classList.add("navbar-padding-transform"); 
+                navbar.classList.add("navbar-padding-transform"); 
             } else {
                 navbar.classList.remove("bg-dark");
                 booknowbutton.classList.add("btn-outline-info")
