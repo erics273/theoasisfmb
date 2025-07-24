@@ -67,6 +67,70 @@
             color: rgba(var(--bs-info-rgb));
         }
 
+        .logo-image {
+            width: 200px;
+            position: absolute;
+            left: 50px;
+            bottom: -140px;
+            /* hangs over the bottom */
+            z-index: 10;
+        }
+
+        /* Give positioning context to the container */
+        .navbar .container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            /* ensures vertical centering */
+            justify-content: space-between;
+            padding-left: 220px;
+            /* leave space for the logo on the left */
+        }
+
+        .navbar .container.nav-padding-transform {
+            padding-left: 60px !important;
+        }
+
+        /* Ensure nav links are centered vertically */
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-image-transform {
+            position: static;
+            width: 120px;
+            margin-bottom: 0;
+            display: block;
+        }
+
+        /* Mobile/collapsed breakpoint */
+        @media (max-width: 991.98px) {
+            .logo-image {
+                position: static;
+                width: 120px;
+                margin-bottom: 0;
+                display: block;
+            }
+
+            .navbar .container {
+                padding-left: 60px;
+                padding-right: 60px;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .navbar-nav {
+                align-items: flex-start;
+            }
+
+            .booknow {
+                width: 100% !important;
+                margin: 1rem 0 0 0 !important;
+            }
+        }
+
+
         /* Mobile styles: Apply styles for screens smaller than 576px */
         @media (max-width: 576px) {
             .carousel-item img {
@@ -80,9 +144,6 @@
                 /* Adjust bottom padding */
             }
 
-            #logo {
-                font-size: 1rem;
-            }
 
         }
     </style>
@@ -105,7 +166,9 @@
         <nav id="headerNav" class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <div class="text-nowrap d-flex flex-column align-items-center">
-                    <a class="navbar-brand" id="logo" href="#">The Oasis FMB</a>
+                    <a class="navbar-brand" id="logo" href="#">
+                        <img src="./assets/images/theoasislogo.png" id="logo-image" alt="The Oasis Logo" class="logo-image ">
+                    </a>
                 </div>
 
 
@@ -201,8 +264,8 @@
                 Beach</h1>
             <p class="lead py-3">
                 <span class="fw-bold">Step inside our beachside retreat with our iGuide Virtual Tour! Explore
-                every corner of
-                The Oasis from the comfort of your home.</span> Walk through bright open spaces, take in the
+                    every corner of
+                    The Oasis from the comfort of your home.</span> Walk through bright open spaces, take in the
                 stunning coastal décor, and imagine yourself unwinding just steps from the sand. Whether
                 you're planning your next getaway or just dreaming of ocean breezes, our immersive tour
                 brings you one step closer to paradise.
@@ -226,9 +289,11 @@
                     <p class="lead">
                         This <span class="fw-bold">newly remodeled</span>, 3 bedroom, 3
                         bathroom house,
-                        has an <span class="fw-bold">in-ground heated saltwater pool</span> and is located mid-island in a quiet
+                        has an <span class="fw-bold">in-ground heated saltwater pool</span> and is located mid-island in
+                        a quiet
                         residential area with
-                        the beautiful Gulf right across the street. It <span class="fw-bold">can accommodate 6 people with
+                        the beautiful Gulf right across the street. It <span class="fw-bold">can accommodate 6 people
+                            with
                             plenty of
                             living space</span> to relax and unwind. Best of all, this home has 13' sliding doors that
                         open to the
@@ -236,7 +301,8 @@
 
                         <br /><br />
 
-                        The location is a <span class="fw-bold">2 minute walk to Ft. Myers Beach and the beautiful Gulf</span>. Your
+                        The location is a <span class="fw-bold">2 minute walk to Ft. Myers Beach and the beautiful
+                            Gulf</span>. Your
                         tropical paradise maintains its small island charm away from the hustle and bustle of Times
                         Square, thus affording
                         quiet relaxation for that desired relaxing getaway. It is equipped with all the amenities you
@@ -386,17 +452,22 @@
         const navbar = document.querySelector("header>nav.navbar");
         const hero = document.querySelector("#heroCarousel");
         const booknowbutton = document.querySelector("a.booknow");
-        console.log(booknowbutton)
+        const logoImage = document.querySelector("#logo-image");
+        const headerContainer = document.querySelector(".navbar .container");
 
         function toggleNav() {
             if (window.scrollY > (hero.offsetHeight - navbar.offsetHeight)) {
                 navbar.classList.add("bg-dark");
                 booknowbutton.classList.remove("btn-outline-info")
                 booknowbutton.classList.add("btn-info")
+                logoImage.classList.add("logo-image-transform")
+                headerContainer.classList.add("nav-padding-transform");
             } else {
                 navbar.classList.remove("bg-dark");
                 booknowbutton.classList.add("btn-outline-info")
                 booknowbutton.classList.remove("btn-info")
+                logoImage.classList.remove("logo-image-transform")
+                headerContainer.classList.remove("nav-padding-transform");
             }
         }
 
@@ -406,7 +477,7 @@
             toggleNav();
         });
 
-        let offset = -100; // Adjust this value to set how much higher you want to scroll
+        let offset = -150; // Adjust this value to set how much higher you want to scroll
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener("click", function (e) {
