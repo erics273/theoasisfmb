@@ -194,14 +194,18 @@
 
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav mx-auto">
-                        <a class="nav-link me-3 text-nowrap" href="#virtualTour"><i
+                        <a data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                            class="nav-link me-3 text-nowrap" href="#virtualTour"><i
                                 class="bi bi-info-circle me-2"></i>Virtual Tour</a>
-                        <a class="nav-link me-3 text-nowrap" href="#learnMore"><i
+                        <a data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" class="nav-link me-3 text-nowrap" href="#learnMore"><i
                                 class="bi bi-info-circle me-2"></i>Learn More</a>
                         <!-- <a class="nav-link me-3 text-nowrap" href="#"><i class="bi bi-camera me-2"></i>Photos</a> -->
-                        <a class="nav-link me-3 text-nowrap" href="#amenities"><i
+                        <a data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" class="nav-link me-3 text-nowrap" href="#amenities"><i
                                 class="bi bi-list me-2"></i>Amenities</a>
-                        <a class="nav-link me-3 text-nowrap" href="#booknow"><i
+                        <a data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" class="nav-link me-3 text-nowrap" href="#booknow"><i
                                 class="bi bi-calendar-event me-2"></i>Book The Oasis</a>
                         <!-- <a class="nav-link me-3 text-nowrap" href="#"><i class="bi bi-phone me-2"></i>Contact</a> -->
                     </div>
@@ -290,7 +294,7 @@
 
         <section id="learnMore" class="py-5 px-3 px-sm-5 shadow-lg container">
             <div class="row row-cols-1 row-cols-lg-2 flex-lg-row justify-content-center align-items-center g-5">
-                
+
                 <div class="col col-lg-7">
                     <h1 class="display-5 fw-bold lh-1 mb-3 border-bottom pb-3">About The Oasis</h1>
                     <p class="lead">
@@ -473,7 +477,7 @@
                 booknowbutton.classList.add("btn-info")
                 logoImage.classList.add("logo-image-transform")
                 headerContainer.classList.add("nav-padding-transform");
-                navbar.classList.add("navbar-padding-transform"); 
+                navbar.classList.add("navbar-padding-transform");
             } else {
                 navbar.classList.remove("bg-dark");
                 booknowbutton.classList.add("btn-outline-info")
