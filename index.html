@@ -471,7 +471,7 @@
         const headerContainer = document.querySelector(".navbar .container");
 
         function toggleNav() {
-            if (window.scrollY > (hero.offsetHeight - navbar.offsetHeight)) {
+            if (window.scrollY > (hero.offsetHeight - navbar.offsetHeight) - 29) {
                 navbar.classList.add("bg-dark");
                 booknowbutton.classList.remove("btn-outline-info")
                 booknowbutton.classList.add("btn-info")
@@ -494,7 +494,7 @@
             toggleNav();
         });
 
-        let offset = -150; // Adjust this value to set how much higher you want to scroll
+        let offset = -100; // Adjust this value to set how much higher you want to scroll
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener("click", function (e) {
