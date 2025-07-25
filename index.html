@@ -111,6 +111,11 @@
             display: block;
         }
 
+        .navbar-collapse .close-btn {
+            display: none
+        }
+
+
         /* Mobile/collapsed breakpoint */
         @media (max-width: 991.98px) {
             .logo-image {
@@ -131,17 +136,45 @@
 
             .navbar-nav {
                 padding-bottom: 30px;
+                align-items: flex-start;
             }
 
             .booknow {
                 width: 100% !important;
                 margin: 1rem 0 0 0 !important;
             }
-        }
 
+            /* Slide-in mobile nav from right */
+            .navbar-collapse {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 75%;
+                max-width: 250px;
+                height: 100vh;
+                background-color: rgba(var(--bs-dark-rgb), 0.9);
+                padding: 2rem 1.5rem;
+                transition: right 0.3s ease;
+                z-index: 1050;
+            }
 
-        /* Mobile styles: Apply styles for screens smaller than 576px */
-        @media (max-width: 576px) {
+            /* When visible */
+            .navbar-collapse.show {
+                right: 0;
+            }
+
+            /* Close button inside nav */
+            .navbar-collapse .close-btn {
+                position: absolute;
+                top: 1rem;
+                right: 1.2rem;
+                font-size: 2rem;
+                color: #fff;
+                border: none;
+                background: none;
+                display: block;
+            }
+
             .carousel-item img {
                 height: 65vh;
             }
@@ -152,7 +185,6 @@
                 padding-bottom: 1rem;
                 /* Adjust bottom padding */
             }
-
 
         }
     </style>
@@ -193,19 +225,17 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <button data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                        class="close-btn">&times;</button>
                     <div class="navbar-nav mx-auto">
-                        <a data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                            class="nav-link me-3 text-nowrap" href="#virtualTour"><i
+                        <a class="nav-link me-3 text-nowrap" href="#virtualTour"><i
                                 class="bi bi-info-circle me-2"></i>Virtual Tour</a>
-                        <a data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" class="nav-link me-3 text-nowrap" href="#learnMore"><i
+                        <a class="nav-link me-3 text-nowrap" href="#learnMore"><i
                                 class="bi bi-info-circle me-2"></i>Learn More</a>
                         <!-- <a class="nav-link me-3 text-nowrap" href="#"><i class="bi bi-camera me-2"></i>Photos</a> -->
-                        <a data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" class="nav-link me-3 text-nowrap" href="#amenities"><i
+                        <a class="nav-link me-3 text-nowrap" href="#amenities"><i
                                 class="bi bi-list me-2"></i>Amenities</a>
-                        <a data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" class="nav-link me-3 text-nowrap" href="#booknow"><i
+                        <a class="nav-link me-3 text-nowrap" href="#booknow"><i
                                 class="bi bi-calendar-event me-2"></i>Book The Oasis</a>
                         <!-- <a class="nav-link me-3 text-nowrap" href="#"><i class="bi bi-phone me-2"></i>Contact</a> -->
                     </div>
